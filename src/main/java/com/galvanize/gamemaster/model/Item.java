@@ -3,38 +3,40 @@ package com.galvanize.gamemaster.model;
 
 import javax.persistence.*;
 
-@Entity(name="ITEM")
-public class Item {
-    public Item(){
 
-    }
+@Entity
+
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ITEM_ID")
-    private Long item_id;
-    private String item_name;
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "name")
+    private String name;
 
+    public Item(){
+
+    }
     public Item(Long id, String name){
-        this.item_id = id;
-        this.item_name = name;
+        this.id = id;
+        this.name = name;
     }
 
-
-    public Long getItem_id() {
-        return item_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setItem_id(Long item_id) {
-        this.item_id = item_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getItem_name() {
-        return item_name;
+    public String getName() {
+        return name;
     }
 
-    public void setItem_name(String item_name) {
-        this.item_name = item_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
